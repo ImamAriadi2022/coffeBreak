@@ -1,0 +1,186 @@
+body{
+    background-color: #F2EAD3;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #3F2305; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  nav .logo {
+    height: 40px; 
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block; 
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    display: block; 
+  }
+  
+  nav ul li a:hover {
+    background-color: #555; 
+  }
+  
+
+  /* ini style grid selamat datang */
+.section-selamatdatang{
+    background-image: url(img/backgroun\ utama.jpg);
+    background-size: cover;
+}
+
+.grid-selamatDatang {
+  display: flex; 
+}
+
+.grid-item {
+  flex: 1; 
+  background-color: none; 
+  padding: none; 
+  border: none; 
+  text-align: center; 
+  box-sizing: border-box; 
+}
+
+.h1-selamatDatang{
+    padding-top: 80px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-display:inherit;
+    color: white;
+    padding-bottom: none;
+    margin-bottom: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+    color: white; 
+    border-radius: 10px;
+}
+
+.h1-selamatDatang .h2-selamatDatang {
+    padding-top: none;
+    margin-top: none;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-display: inherit;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.grid1 {
+    padding-top: 7rem;
+}
+.container-button-selamatdatang{
+    padding-top: 8rem;
+    position: relative;
+}
+
+.button {
+    background-color: #3F2305; 
+    color: white; 
+    padding: 15px 20px; 
+    border: none; 
+    border-radius: 5px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.container2{
+    padding-top: 8rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 200px;
+}
+
+.h2 {
+    color: #3F2305;
+    font-size: 90px;
+}
+
+.grid {
+    display: flex;
+    padding: 1rem;
+}
+
+.grid-item1 {
+    flex: 1; 
+    background-color: none; 
+    padding: 1rem; 
+    margin: 10px;
+    border: none; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+.grid-item2 {
+    flex: 1; 
+    background-color: none; 
+    padding: 1rem; 
+    margin: 10px;
+    border: none; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+.grid-item3 {
+    flex: 1; 
+    background-color: none; 
+    padding: 1rem; 
+    margin: 10px;
+    border: none; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+/* style card */
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #F5F5F5;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    margin-top: 0;
+  }
+  
+  .card-description {
+    margin-bottom: 0;
+  }
+
+
+.link  {
+  color: white; 
+  text-decoration: none;
+}
