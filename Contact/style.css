@@ -1,10 +1,18 @@
-body
-{
+body {
     margin:0;
 }
 
-nav 
-{
+h1 {
+    margin: auto;
+	color: #343434;
+	font-family: 'Ultra', sans-serif;   
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+    text-align: center;
+    padding: 10vh;
+}
+
+nav {
     background-color: #3F2305; 
     padding: 10px; 
     display: flex; 
@@ -13,37 +21,32 @@ nav
     font-family: Arial, Helvetica, sans-serif;
 }
   
-nav .logo 
-{
+nav .logo {
     height: 40px; 
 }
   
-nav ul 
-{
+nav ul {
     list-style-type: none;
     text-align: center;
 }
   
-nav ul li 
-{
+nav ul li {
     display: inline-block; 
     margin-right: 20px;
 }
   
-nav ul li a 
-{
+nav ul li a {
     color: white; 
     text-decoration: none; 
     padding: 10px 15px; 
     display: block; 
 }
   
-nav ul li a:hover 
-{
+nav ul li a:hover {
     color: #f6fd20; 
 }
 
-div
-{
+div{
     font-family: Arial, Helvetica, sans-serif;
 }
+
