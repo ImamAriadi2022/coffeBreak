@@ -9,11 +9,12 @@ body, ul {
 
 nav {
   background-color: #3F2305; 
-  padding: 10px; 
+  padding: 0; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  height: 4rem;
 }
 
 nav .logo {
@@ -28,12 +29,13 @@ nav ul {
 nav ul li {
   display: inline-block; 
   margin-right: 20px;
+  padding-top: 9px;
 }
 
 nav ul li a {
   color: white; 
   text-decoration: none; 
-  padding: 10px 15px; 
+  padding: none; 
   display: block; 
 }
 
@@ -41,6 +43,11 @@ nav ul li a:hover {
   color: #f6fd20; 
 }
 
+.background {
+  background-image: url(background-01.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+}
 
 
 /* ini style grid selamat datang */
@@ -212,8 +219,9 @@ margin: 0 auto;
 }
 
 .carousel-slide {
-display: flex;
-overflow-x: auto;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory
 }
 
 .review {
@@ -298,3 +306,10 @@ align-items: center;
 
 /*my footer fixed*/
 
+
+
+
+.buttonMenuKopi {
+  justify-content: end;
+  align-items: end;
+}
