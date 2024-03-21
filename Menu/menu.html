@@ -58,7 +58,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Americano</h5>
                   <p class="card-text" style="font-size: 13px;">Espresso yang diencerkan dengan air panas, memberikan rasa kopi yang lebih ringan daripada espresso tetapi dengan kekuatan kafein yang sama.</p>
-                  <a href="#" class="btn btn-warning">Order now</a>
+                  <a href="#" class="btn btn-warning order-link-2" data-name-2="Americano" data-price-2="16000">Order now</a>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Macchiato</h5>
                   <p class="card-text" style="font-size: 14.4px;">Espresso dengan tambahan sedikit susu, memberikan sentuhan manis pada rasa kopi tanpa mengurangi kekentalannya.</p>
-                  <a href="#" class="btn btn-warning">Order now</a>
+                  <a href="#" class="btn btn-warning order-link-3" data-name-3="Macchiato" data-price-3="24000">Order now</a>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Espresso</h5>
                   <p class="card-text" style="font-size: 12px;">Kopi kental yang diseduh dengan menyemprotkan air panas di bawah tekanan melalui bubuk kopi yang dipadatkan.</p>
-                  <a href="#" class="btn btn-warning">Order now</a>
+                  <a href="#" class="btn btn-warning order-link-4" data-name-4="Espresso" data-price-4="32000">Order now</a>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@
               <div class="card-body">
                 <h5 class="card-title">Latte</h5>
                 <p class="card-text" style="font-size: small;">Campuran espresso dengan susu, biasanya disajikan dengan lapisan busa susu di atasnya.</p>
-                <a href="#" class="btn btn-warning">Order now</a>
+                <a href="#" class="btn btn-warning order-link-5" data-name-5="Latte" data-price-5="34000">Order now</a>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@
               <div class="card-body">
                 <h5 class="card-title">Mocha</h5>
                 <p class="card-text" style="font-size: small;">Campuran espresso, susu, dan sirup cokelat, menciptakan minuman kopi yang manis dengan rasa cokelat yang kaya.</p>
-                <a href="#" class="btn btn-warning">Order now</a>
+                <a href="#" class="btn btn-warning order-link-6" data-name-6="Mocha" data-price-6="29000">Order now</a>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@
             </div>
             <div class="col">
               <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close close-1">&times;</span>
                 <h2 style="color: aliceblue;">Order Now</h2>
                 <form id="orderFormContent" onsubmit="orderNow(); return false;">
                   <label for="coffeeName" style="color: aliceblue;">Nama Kopi:</label><br>
@@ -143,9 +143,40 @@
         <!--grid konten-->
       </div>
       <!--Pop up 1 -->
-
-
-      <!-- sampai sini aku lupa mode cook-->
+      
+      <!--Pop up 2 -->
+      <div id="orderForm2" class="modal2">
+        <!--grid konten -->
+        <div class="container text-center">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <!--ini adalah cards 2-->
+              </div>
+              <div class="col">
+                <div class="modal-content-2">
+                  <span class="close close-2">&times;</span> <br>
+                  <h2 style="color: aliceblue;">Order Now</h2>
+                  <form id="orderFormContent2" onsubmit="orderNow2(); return false;">
+                    <label for="coffeeName2" style="color: aliceblue;">Nama Kopi</label><br>
+                    <input type="text" id="coffeeName2" name="coffeeName2" readonly><br>
+                    <label for="price2" style="color: aliceblue;"> Harga :</label> <br>
+                    <input type="text" id="price2" name="price2" readonly><br>
+                    <label for="quantity2" style="color: aliceblue;">Jumlah Kopi : </label> <br>
+                    <input type="number" id="quantity2" name="quantity2" value="1" min="1"> <br> <div><br></div>
+                    <button type="submit">Order</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col">
+                <!--ini adalah cards 2-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--grid konten -->
+      </div>
+      <!--Pop up 2 -->
       <br><br>
     </section>
       <!--Section menu-->
