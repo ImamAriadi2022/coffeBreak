@@ -88,3 +88,21 @@ document.getElementById("orderFormContent2").addEventListener("submit", function
 
   modalkedua.style.display = "none";
 });
+
+
+//link to whats app
+function orderNow2 (){
+  var coffeeNameKedua = document.getElementById("coffeeName2").value;
+  var priceKedua = document.getElementById("price2").value;
+  var quantityKedua = document.getElementById("quantity2").value;
+
+  var message = "Pesanan Anda : \n" + coffeeNameKedua + "\nHarga satuan : " + priceKedua + "\nHarga Total : " + (priceKedua * quantityKedua);
+
+  var adminPhoneNumber = "6285788322061";
+  var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
+  
+  window.open(whatsappURL);
+
+  document.getElementById("backButton").style.display = "block";
+
+}//ini adalah baris terakhir dari link to what app
