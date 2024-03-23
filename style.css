@@ -12,8 +12,7 @@ nav {
   padding: 0; 
   display: flex; 
   justify-content: space-between; 
-  align-items: center; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  align-items: center;
   height: 4rem;
 }
 
