@@ -48,7 +48,7 @@ nav ul li a:hover {
     border-radius: 6px;
     padding: 20px 60px 30px 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .container .content {
@@ -147,7 +147,7 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 .button input[type="button"]:hover {
-    background: #5029bc;
+    background: #944c00;
 }
   
 @media (max-width: 950px) {
@@ -184,7 +184,36 @@ nav ul li a:hover {
     }
 }
 
-div{
-    font-family: Arial, Helvetica, sans-serif;
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3F2305;
 }
 
+footer .col {
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#custom-header-h4 {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+}
+
+.container text {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.img-footer {
+    width: 150px;
+}
