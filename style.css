@@ -278,14 +278,6 @@ footer {
 background-color: #3F2305;
 }
 
-#custom-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #3F2305;
-}
-
 .img-footer{
 width: 150px;
 }
