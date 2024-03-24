@@ -109,51 +109,108 @@ function orderNow2 (){
 
 
 // Ini adalah fitur order untuk card 3
-var modalketiga = document.getElementById("orderForm3");
-var spanketiga = document.getElementsByClassName("close close-3")[0]; // Gunakan indeks pertama
-var orderLinkketiga = document.getElementsByClassName("order-link-3");
+var modalkeempat = document.getElementById("orderForm4");
+var spankeempat = document.getElementsByClassName("close close-4")[0]; // Gunakan indeks pertama
+var orderLinkkeempat = document.getElementsByClassName("order-link-4");
 
-Array.from(orderLinkketiga).forEach(function(link) {
+Array.from(orderLinkkeempat).forEach(function(link) {
   link.addEventListener("click", function(event) {
     event.preventDefault();
-    var coffeeNameketiga = this.getAttribute("data-name-3");
-    var priceketiga = this.getAttribute("data-price-3");
+    var coffeeNamekeempat = this.getAttribute("data-name-4");
+    var pricekeempat = this.getAttribute("data-price-4");
 
-    document.getElementById("coffeeName3").value = coffeeNameketiga; // Tetapkan nilai kopi
-    document.getElementById("price3").value = priceketiga; // Tetapkan harga kopi
+    document.getElementById("coffeeName4").value = coffeeNamekeempat; // Tetapkan nilai kopi
+    document.getElementById("price4").value = pricekeempat; // Tetapkan harga kopi
 
-    modalketiga.style.display = "block";
+    modalkeempat.style.display = "block";
   });
 });
 
 
-spanketiga.onclick = function() {
-  modalketiga.style.display = "none";
+spankeempat.onclick = function() {
+  modalkeempat.style.display = "none";
 };
 
 window.onclick = function(event) {
-  if (event.target == modalketiga) {
-    modalketiga.style.display = "none";
+  if (event.target == modalkeempat) {
+    modalkeempat.style.display = "none";
+  }
+};
+
+document.getElementById("orderFormContent4").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var coffeeNamekeempat = document.getElementById("coffeeName4").value;
+  var pricekeempat = document.getElementById("price4").value;
+  var quantitykeempat = document.getElementById("quantity4").value;
+
+  modalkeempat.style.display = "none";
+});
+
+
+//link to whats app card 4
+function orderNow4 (){
+  var coffeeNamekeempat = document.getElementById("coffeeName4").value;
+  var pricekeempat = document.getElementById("price4").value;
+  var quantitykeempat = document.getElementById("quantity4").value;
+
+  var message = "Pesanan Anda : \n" + coffeeNamekeempat + "\nHarga satuan : " + pricekeempat + "\nHarga Total : " + (pricekeempat * quantitykeempat);
+
+  var adminPhoneNumber = "6281367010835";
+  var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
+  
+  window.open(whatsappURL);
+
+  document.getElementById("backButton").style.display = "block";
+
+}//ini adalah baris terakhir dari link to what app
+
+
+// Ini adalah fitur order untuk card 4
+var modalkeempat = document.getElementById("orderForm3");
+var spankeempat = document.getElementsByClassName("close close-3")[0]; // Gunakan indeks pertama
+var orderLinkkeempat = document.getElementsByClassName("order-link-3");
+
+Array.from(orderLinkkeempat).forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    var coffeeNamekeempat = this.getAttribute("data-name-3");
+    var pricekeempat = this.getAttribute("data-price-3");
+
+    document.getElementById("coffeeName3").value = coffeeNamekeempat; // Tetapkan nilai kopi
+    document.getElementById("price3").value = pricekeempat; // Tetapkan harga kopi
+
+    modalkeempat.style.display = "block";
+  });
+});
+
+
+spankeempat.onclick = function() {
+  modalkeempat.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target == modalkeempat) {
+    modalkeempat.style.display = "none";
   }
 };
 
 document.getElementById("orderFormContent3").addEventListener("submit", function(event) {
   event.preventDefault();
-  var coffeeNameketiga = document.getElementById("coffeeName3").value;
-  var priceketiga = document.getElementById("price3").value;
-  var quantityketiga = document.getElementById("quantity3").value;
+  var coffeeNamekeempat = document.getElementById("coffeeName3").value;
+  var pricekeempat = document.getElementById("price3").value;
+  var quantitykeempat = document.getElementById("quantity3").value;
 
-  modalketiga.style.display = "none";
+  modalkeempat.style.display = "none";
 });
 
 
-//link to whats app card 3
+//link to whats app card 4
 function orderNow3 (){
-  var coffeeNameketiga = document.getElementById("coffeeName3").value;
-  var priceketiga = document.getElementById("price3").value;
-  var quantityketiga = document.getElementById("quantity3").value;
+  var coffeeNamekeempat = document.getElementById("coffeeName4").value;
+  var pricekeempat = document.getElementById("price4").value;
+  var quantitykeempat = document.getElementById("quantity4").value;
 
-  var message = "Pesanan Anda : \n" + coffeeNameketiga + "\nHarga satuan : " + priceketiga + "\nHarga Total : " + (priceketiga * quantityketiga);
+  var message = "Pesanan Anda : \n" + coffeeNamekeempat + "\nHarga satuan : " + pricekeempat + "\nHarga Total : " + (pricekeempat * quantitykeempat);
 
   var adminPhoneNumber = "6285788322061";
   var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
