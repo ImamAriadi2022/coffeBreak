@@ -155,6 +155,63 @@ function orderNow3 (){
 
   var message = "Pesanan Anda : \n" + coffeeNameketiga + "\nHarga satuan : " + priceketiga + "\nHarga Total : " + (priceketiga * quantityketiga);
 
+  var adminPhoneNumber = "6285788322061";
+  var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
+  
+  window.open(whatsappURL);
+
+  document.getElementById("backButton").style.display = "block";
+
+}//ini adalah baris terakhir dari link to what app
+
+
+// Ini adalah fitur order untuk card 4
+var modalkeempat = document.getElementById("orderForm4");
+var spankeempat = document.getElementsByClassName("close close-4")[0]; // Gunakan indeks pertama
+var orderLinkkeempat = document.getElementsByClassName("order-link-4");
+
+Array.from(orderLinkkeempat).forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    var coffeeNamekeempat = this.getAttribute("data-name-4");
+    var pricekeempat = this.getAttribute("data-price-4");
+
+    document.getElementById("coffeeName4").value = coffeeNamekeempat; // Tetapkan nilai kopi
+    document.getElementById("price4").value = pricekeempat; // Tetapkan harga kopi
+
+    modalkeempat.style.display = "block";
+  });
+});
+
+
+spankeempat.onclick = function() {
+  modalkeempat.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target == modalkeempat) {
+    modalkeempat.style.display = "none";
+  }
+};
+
+document.getElementById("orderFormContent4").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var coffeeNamekeempat = document.getElementById("coffeeName4").value;
+  var pricekeempat = document.getElementById("price4").value;
+  var quantitykeempat = document.getElementById("quantity4").value;
+
+  modalkeempat.style.display = "none";
+});
+
+
+//link to whats app card 4
+function orderNow4 (){
+  var coffeeNamekeempat = document.getElementById("coffeeName4").value;
+  var pricekeempat = document.getElementById("price4").value;
+  var quantitykeempat = document.getElementById("quantity4").value;
+
+  var message = "Pesanan Anda : \n" + coffeeNamekeempat + "\nHarga satuan : " + pricekeempat + "\nHarga Total : " + (pricekeempat * quantitykeempat);
+
   var adminPhoneNumber = "6281367010835";
   var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
   
@@ -165,60 +222,120 @@ function orderNow3 (){
 }//ini adalah baris terakhir dari link to what app
 
 
-// // Ini adalah fitur order untuk card 4
-// var modalkeempat = document.getElementById("orderForm4");
-// var spankeempat = document.getElementsByClassName("close close-4")[0]; // Gunakan indeks pertama
-// var orderLinkkeempat = document.getElementsByClassName("order-link-4");
 
-// Array.from(orderLinkkeempat).forEach(function(link) {
-//   link.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     var coffeeNamekeempat = this.getAttribute("data-name-4");
-//     var pricekeempat = this.getAttribute("data-price-4");
+// Ini adalah fitur order untuk card 5
+var modalkelima = document.getElementById("orderForm5");
+var spankelima = document.getElementsByClassName("close close-5")[0]; // Gunakan indeks pertama
+var orderLinkkelima = document.getElementsByClassName("order-link-5");
 
-//     document.getElementById("coffeeName4").value = coffeeNamekeempat; // Tetapkan nilai kopi
-//     document.getElementById("price4").value = pricekeempat; // Tetapkan harga kopi
+Array.from(orderLinkkelima).forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    var coffeeNamekelima = this.getAttribute("data-name-5");
+    var pricekelima = this.getAttribute("data-price-5");
 
-//     modalkeempat.style.display = "block";
-//   });
-// });
+    document.getElementById("coffeeName5").value = coffeeNamekelima; // Tetapkan nilai kopi
+    document.getElementById("price5").value = pricekelima; // Tetapkan harga kopi
 
-
-// spankeempat.onclick = function() {
-//   modalkeempat.style.display = "none";
-// };
-
-// window.onclick = function(event) {
-//   if (event.target == modalkeempat) {
-//     modalkeempat.style.display = "none";
-//   }
-// };
-
-// document.getElementById("orderFormContent4").addEventListener("submit", function(event) {
-//   event.preventDefault();
-//   var coffeeNamekeempat = document.getElementById("coffeeName4").value;
-//   var pricekeempat = document.getElementById("price4").value;
-//   var quantitykeempat = document.getElementById("quantity4").value;
-
-//   modalkeempat.style.display = "none";
-// });
+    modalkelima.style.display = "block";
+  });
+});
 
 
-// //link to whats app card 4
-// function orderNow4 (){
-//   var coffeeNamekeempat = document.getElementById("coffeeName4").value;
-//   var pricekeempat = document.getElementById("price4").value;
-//   var quantitykeempat = document.getElementById("quantity4").value;
+spankelima.onclick = function() {
+  modalkelima.style.display = "none";
+};
 
-//   var message = "Pesanan Anda : \n" + coffeeNamekeempat + "\nHarga satuan : " + pricekeempat + "\nHarga Total : " + (pricekeempat * quantitykeempat);
+window.onclick = function(event) {
+  if (event.target == modalkelima) {
+    modalkelima.style.display = "none";
+  }
+};
 
-//   var adminPhoneNumber = "6285788322061";
-//   var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
+document.getElementById("orderFormContent5").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var coffeeNamekelima = document.getElementById("coffeeName5").value;
+  var pricekelima = document.getElementById("price5").value;
+  var quantitykelima = document.getElementById("quantity5").value;
+
+  modalkelima.style.display = "none";
+});
+
+
+//link to whats app card 5
+function orderNow5 (){
+  var coffeeNamekelima = document.getElementById("coffeeName5").value;
+  var pricekelima = document.getElementById("price5").value;
+  var quantitykelima = document.getElementById("quantity5").value;
+
+  var message = "Pesanan Anda : \n" + coffeeNamekelima + "\nHarga satuan : " + pricekelima + "\nHarga Total : " + (pricekelima * quantitykelima);
+
+  var adminPhoneNumber = "6281367010835";
+  var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
   
-//   window.open(whatsappURL);
+  window.open(whatsappURL);
 
-//   document.getElementById("backButton").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
 
-// }//ini adalah baris terakhir dari link to what app
+}//ini adalah baris terakhir dari link to what app
 
 
+
+// Ini adalah fitur order untuk card 6
+var modalkeenam = document.getElementById("orderForm6");
+var spankeenam = document.getElementsByClassName("close close-6")[0]; // Gunakan indeks pertama
+var orderLinkkeenam = document.getElementsByClassName("order-link-6");
+
+Array.from(orderLinkkeenam).forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    var coffeeNamekeenam = this.getAttribute("data-name-6");
+    var pricekeenam = this.getAttribute("data-price-6");
+
+    document.getElementById("coffeeName6").value = coffeeNamekeenam; // Tetapkan nilai kopi
+    document.getElementById("price6").value = pricekeenam; // Tetapkan harga kopi
+
+    modalkeenam.style.display = "block";
+  });
+});
+
+
+spankeenam.onclick = function() {
+  modalkeenam.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target == modalkeenam) {
+    modalkeenam.style.display = "none";
+  }
+};
+
+document.getElementById("orderFormContent6").addEventListener("submit", function(event) {
+  event.preventDefault();
+  var coffeeNamekeenam = document.getElementById("coffeeName6").value;
+  var pricekeenam = document.getElementById("price6").value;
+  var quantitykeenam = document.getElementById("quantity6").value;
+
+  modalkeenam.style.display = "none";
+});
+
+
+//link to whats app card 6
+function orderNow6 (){
+  var coffeeNamekeenam = document.getElementById("coffeeName6").value;
+  var pricekeenam = document.getElementById("price6").value;
+  var quantitykeenam = document.getElementById("quantity6").value;
+
+  var message = "Pesanan Anda : \n" + coffeeNamekeenam + "\nHarga satuan : " + pricekeenam + "\nHarga Total : " + (pricekeenam * quantitykeenam);
+
+  var adminPhoneNumber = "6281367010835";
+  var whatsappURL = "https://api.whatsapp.com/send?phone=" + adminPhoneNumber + "&text=" + encodeURIComponent(message);
+  
+  window.open(whatsappURL);
+
+  document.getElementById("backButton").style.display = "block";
+
+}//ini adalah baris terakhir dari link to what app
+
+
+console.log("PRESSTYLE DULU BOS WKWK")
