@@ -428,3 +428,35 @@ align-items: center;
 .button-form input[type="button"]:hover {
   background: #944c00;
 }
+
+/* Profile */
+.tentang-coffee {
+  background-image: url('/img/kopi-bg.jpg');
+  background-repeat: no-repeat; /* untuk menghindari pengulangan gambar */
+  background-position: center; /* untuk menentukan posisi gambar pada section */
+  background-size: cover; /* untuk menyesuaikan ukuran gambar dengan ukuran section */
+  padding: 10%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% auto;
+  justify-content: center;
+  background-color: #ffffff9d;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.grid-container .column-1{
+  background-image: url('/img/sejarah-kopi.jpg');
+  background-repeat: no-repeat; /* untuk menghindari pengulangan gambar */
+  background-position: center; /* untuk menentukan posisi gambar pada section */
+  background-size: cover; /* untuk menyesuaikan ukuran gambar dengan ukuran section */
+  border-radius: 10px 0px 0px 10px;
+}
+
+.grid-container .column-2{
+  font-size: 1rem;
+  text-align: justify;
+  padding: 1%;
+}
