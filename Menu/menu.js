@@ -231,6 +231,7 @@ var orderLinkkelima = document.getElementsByClassName("order-link-5");
 Array.from(orderLinkkelima).forEach(function(link) {
   link.addEventListener("click", function(event) {
     event.preventDefault();
+    
     var coffeeNamekelima = this.getAttribute("data-name-5");
     var pricekelima = this.getAttribute("data-price-5");
 
