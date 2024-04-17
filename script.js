@@ -1,47 +1,3 @@
-var swiper = new Swiper('.swiper-container', {
-    direction: 'vertical', // Menentukan arah slide menjadi vertikal
-    slidesPerView: 'auto', // Mengatur jumlah slide yang terlihat dalam satu waktu
-    spaceBetween: 30, // Mengatur jarak antara slide
-    mousewheel: true, // Memungkinkan navigasi slide menggunakan scroll mouse
-  });
-
-
-  const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const carouselSlide = document.querySelector('.carousel-slide');
-
-let counter = 0;
-
-nextBtn.addEventListener('click', () => {
-  carouselSlide.scrollLeft += 350; // Adjust scroll distance according to your content width
-  counter++;
-});
-
-prevBtn.addEventListener('click', () => {
-  if (counter > 0) {
-    carouselSlide.scrollLeft -= 350; // Adjust scroll distance according to your content width
-    counter--;
-  }
-});
-
-
-
-// Buat instance Hammer.js pada elemen carousel-slide
-const hammer = new Hammer(carouselSlide);
-
-// Atur opsi swipe
-hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-
-// Tambahkan event listener untuk swipe kiri
-hammer.on('swipeleft', () => {
-  carouselSlide.scrollLeft += 350; // Sesuaikan dengan jarak yang sesuai
-});
-
-// Tambahkan event listener untuk swipe kanan
-hammer.on('swiperight', () => {
-  carouselSlide.scrollLeft -= 350; // Sesuaikan dengan jarak yang sesuai
-});
-
 
 
 
@@ -60,4 +16,52 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
+
+//in js buat rss feed
+
+
+
+//dahlah
+        // URL RSS feed
+          // URL RSS feed
+          const rssFeedUrl = 'https://rss.app/feeds/IUJxN8O83jCnKAth.xml';
+
+          // Mendapatkan elemen div untuk menampilkan RSS feed
+          const rssContainer = document.getElementById('rss-feed');
   
+          // Mendapatkan data dari RSS feed
+          fetch(rssFeedUrl)
+              .then(response => response.text())
+              .then(xmlData => {
+                  // Parsing XML data
+                  const parser = new DOMParser();
+                  const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
+                  const items = xmlDoc.querySelectorAll('item');
+  
+                  // Menampilkan setiap item RSS feed
+                  items.forEach(item => {
+                      const title = item.querySelector('title').textContent;
+                      const link = item.querySelector('link').textContent;
+  
+                      // Membuat elemen untuk menampilkan judul dan link
+                      const feedItem = document.createElement('div');
+                      feedItem.classList.add('feed-item');
+                      const titleElement = document.createElement('h2');
+                      const linkElement = document.createElement('a');
+  
+                      // Mengatur judul dan link
+                      titleElement.textContent = title;
+                      linkElement.textContent = 'Read more';
+                      linkElement.href = link;
+                      linkElement.target = '_blank'; // Buka link di tab baru
+  
+                      // Menambahkan elemen ke dalam div RSS feed
+                      feedItem.appendChild(titleElement);
+                      feedItem.appendChild(linkElement);
+                      rssContainer.appendChild(feedItem);
+                  });
+              })
+              .catch(error => {
+                  console.error('Error fetching or parsing RSS feed:', error); // Tambahkan penanganan kesalahan
+              });

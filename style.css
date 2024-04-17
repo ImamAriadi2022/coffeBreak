@@ -694,3 +694,71 @@ align-items: center;
   padding: 1rem;
   border-radius: 0px 30px 0px 30px;
 }
+
+
+
+/*BHAAA RSS DONE*/
+/* CSS untuk container RSS feed */
+#rss-feed {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* CSS untuk setiap item dalam RSS feed */
+.feed-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+/* CSS untuk judul setiap item */
+.feed-item h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* CSS untuk tautan setiap item */
+.feed-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* CSS untuk tautan saat dihover */
+.feed-item a:hover {
+  text-decoration: underline;
+}
+
+/* CSS untuk tombol "More News" */
+#more-news {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#rss-feed-container {
+  background-color: #ffffff; /* Warna latar belakang putih */
+  padding: 20px;
+}
+
+.containerRss {
+  background-color: #ffffff; /* Warna latar belakang putih */
+  max-width: 800px; /* Lebar maksimum div */
+  margin: 0 auto; /* Posisi div di tengah halaman */
+  padding: 20px; /* Padding untuk isi div */
+  border-radius: 40px;
+}
+
+
+.judul-bawah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  padding-top: 20px;
+}
