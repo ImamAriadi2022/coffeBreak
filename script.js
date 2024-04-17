@@ -25,7 +25,7 @@ window.addEventListener('scroll', function() {
 //dahlah
         // URL RSS feed
           // URL RSS feed
-          const rssFeedUrl = 'https://rss.app/feeds/IUJxN8O83jCnKAth.xml';
+          const rssFeedUrl = 'https://rss.app/feeds/bYqLnWg0BL0BPUTh.xml';
 
           // Mendapatkan elemen div untuk menampilkan RSS feed
           const rssContainer = document.getElementById('rss-feed');
@@ -43,21 +43,25 @@ window.addEventListener('scroll', function() {
                   items.forEach(item => {
                       const title = item.querySelector('title').textContent;
                       const link = item.querySelector('link').textContent;
+                      const thumbnailUrl = item.querySelector('enclosure').getAttribute('url'); // Mengambil URL gambar thumbnail
   
                       // Membuat elemen untuk menampilkan judul dan link
                       const feedItem = document.createElement('div');
                       feedItem.classList.add('feed-item');
                       const titleElement = document.createElement('h2');
+                      const thumbnailElement = document.createElement('img'); // Membuat elemen gambar
                       const linkElement = document.createElement('a');
   
                       // Mengatur judul dan link
                       titleElement.textContent = title;
                       linkElement.textContent = 'Read more';
+                      thumbnailElement.src = thumbnailUrl; // Mengatur URL gambar thumbnail
                       linkElement.href = link;
                       linkElement.target = '_blank'; // Buka link di tab baru
   
                       // Menambahkan elemen ke dalam div RSS feed
                       feedItem.appendChild(titleElement);
+                      feedItem.appendChild(thumbnailElement); // Menambahkan elemen gambar
                       feedItem.appendChild(linkElement);
                       rssContainer.appendChild(feedItem);
                   });

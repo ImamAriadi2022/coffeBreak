@@ -720,7 +720,7 @@ align-items: center;
 
 /* CSS untuk tautan setiap item */
 .feed-item a {
-  color: #007bff;
+  color: #533600;
   text-decoration: none;
 }
 
@@ -761,4 +761,9 @@ align-items: center;
   align-items: center;
   font-family: monospace;
   padding-top: 20px;
+}
+
+.feed-item img {
+  width: 700px; /* Lebar gambar thumbnail 100 piksel */
+  height: auto; /* Menyesuaikan tinggi sesuai proporsi asli */
 }
