@@ -49,18 +49,22 @@
           <div class="topic-text">Kirimkan kami sebuah pesan!</div>
           <p>Jika kamu memiliki sebuah masukan atau kritikan terhadap kopi yang kami sajikan atau terhadap website kami, kamu bisa mengirimkan pesan tersebut disini. Kami menghargai kritik dan saran dari kalian. Terimakasih!</p>
           <form action="#">
-            <div class="input-box">
-              <input id="input-nama" type="text" placeholder="Masukkan nama anda" />
-            </div>
-            <div class="input-box">
-              <input id="input-email" type="text" placeholder="Masukkan email anda" />
-            </div>
-            <div class="input-box message-box">
-              <textarea id="input-pesan" placeholder="Masukkan pesan anda"></textarea>
-            </div>
-            <div class="button-form">
-              <input id="input-test" type="button" value="Kirim sekarang" />
-            </div>
+            <fieldset>
+              <div class="input-box">
+                <label for="nama">Nama:</label>
+                <input id="input-nama" type="text" placeholder="Masukkan nama anda" />
+              </div>
+              <div class="input-box">
+                <label for="nama">Email:&nbsp</label>
+                <input id="input-email" type="text" placeholder="Masukkan email anda" />
+              </div>
+              <div class="input-box message-box">
+                <textarea id="input-pesan" placeholder="Masukkan pesan anda"></textarea>
+              </div>
+              <div class="button-form">
+                <input id="input-test" type="button" value="Kirim sekarang" />
+              </div>
+            </fieldset>
           </form>
           <p style="margin-top: 12px;" id="feedback"></p>
         </div>
