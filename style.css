@@ -767,3 +767,22 @@ align-items: center;
   width: 700px; /* Lebar gambar thumbnail 100 piksel */
   height: auto; /* Menyesuaikan tinggi sesuai proporsi asli */
 }
+
+
+.link-youtube {
+  color: #944c00;
+  text-decoration: none;
+}
+
+.style-youtube {
+  justify-content: center;
+  align-items: center;
+  display:flex; 
+}
+
+.container-youtube{
+  background-color: #ffffff;
+  max-width: 100px; /* Lebar maksimum div */
+  margin: 0 auto; /* Posisi div di tengah halaman */
+  border-radius: 20px;
+}
