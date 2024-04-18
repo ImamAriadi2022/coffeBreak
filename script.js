@@ -69,3 +69,15 @@ window.addEventListener('scroll', function() {
               .catch(error => {
                   console.error('Error fetching or parsing RSS feed:', error); // Tambahkan penanganan kesalahan
               });
+
+
+//fungsi untuk mematikan fungsi klik kanan
+// Mengambil semua elemen img dalam halaman
+var images = document.getElementsByTagName('img');
+
+// Menambahkan event listener untuk setiap elemen img
+for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Mencegah tampilnya menu konteks saat klik kanan
+    });
+}
